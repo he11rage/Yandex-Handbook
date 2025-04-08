@@ -1,6 +1,24 @@
-year = int(input())
+first_number = int(input())
+second_number = int(input())
+third_number = int(input())
 
-if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
-    print("YES")
+a = 0
+b = 0
+hypo = max(first_number, second_number, third_number)
+
+if hypo == first_number:
+    a = second_number
+    b = third_number
+elif hypo == second_number:
+    a = first_number
+    b = third_number
 else:
-    print("NO")
+    a = first_number
+    b = second_number
+
+if a ** 2 + b ** 2 == hypo ** 2:
+    print("100%")
+elif a ** 2 + b ** 2 < hypo ** 2:
+    print("велика")
+else:
+    print("крайне мала")    

@@ -1,6 +1,13 @@
-year = int(input())
+first_str = input()
+second_str = input()
+third_str = input()
 
-if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
-    print("YES")
-else:
-    print("NO")
+str_contains = []
+
+for str in [first_str, second_str, third_str]:
+    if "зайка" in str:
+        str_contains.append(str)
+        
+result = min(str_contains)        
+print(f"{result} {len(result)}")
+        
